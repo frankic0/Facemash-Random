@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>FaceMash</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	</head>
+	<body>
+	<div style="background-color: #8B0003;">
+	<a>
+		<span style="text-align: center; color: #FFFFFF">
+			<h1 style="font-size: 6vw"> FACEMASH </h1>
+			<h3 style="font-size: 1.6vw"> using thispersondoesnotexist.com</h3>
+		</span>
+	</a>
+	</div>
+	<div style="text-align: center">
+		<style>
+			#menu ul{
+			  padding-top: 64px;
+			  list-style: none;
+			}
+			#menu li{
+			padding-top: 64px;
+			  display: inline-flex;
+			}
+			.container {
+				display: -webkit-flexbox;
+				display: -ms-flexbox;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-flex-align: center;
+				-ms-flex-align: center;
+				-webkit-align-items: center;
+				align-items: center;
+				justify-content: center;
+			}
+		</style>
+		<div style="padding-top:64px">
+			<span style="text-align: center; color: #000000">
+				<h1 style="font-size: 1.6vw"> Which one looks more human? </h1>
+				<h3 style="font-size: 1.6vw"> Click to choose</h3>
+			</span>
+		</div>
+	</div>
+	<div class="container">
+		<ul id="menu">
+			<li>
+				<a href="">
+				<img name="firstpic" src="/static/loading.gif"  width="256" height="256">
+				</a>
+			</li>
+			<li> Or </li>
+			<li>
+				<a href="">
+				<img  name="secondpic" src="/static/loading.gif"  width="256" height="256">
+				</a>
+			</li>
+		</ul>
+	</div>
+	<script>
+		var img = new Image();
+		img.src = "https://thispersondoesnotexist.com/image";
+		window.setTimeout(function () {
+		var img2 = new Image();
+		img2.src = "https://thispersondoesnotexist.com/image?cache=" + new Date().getTime();
+		img2.onload = function() {
+			document.querySelector('img[name="firstpic"]').src = img.src;
+			document.querySelector('img[name="secondpic"]').src = img2.src;
+		};
+			}, 1000);
+	</script>
+	</body>
+</html>
