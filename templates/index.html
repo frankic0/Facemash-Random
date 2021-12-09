@@ -65,8 +65,13 @@
 		var img2 = new Image();
 		img2.src = "https://thispersondoesnotexist.com/image?cache=" + new Date().getTime();
 		img2.onload = function() {
+		var img3 = new Image();
+		img3.src = "https://thispersondoesnotexist.com/image?cache=" + new Date().getTime();
+		img3.onload = function() {
 			document.querySelector('img[name="firstpic"]').src = img.src;
 			document.querySelector('img[name="secondpic"]').src = img2.src;
+			document.querySelector('img[name="secondpic"]').src = img3.src;
+			
 		};
 			}, 1000);
 	</script>
